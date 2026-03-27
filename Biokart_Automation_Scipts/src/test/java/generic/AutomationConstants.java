@@ -5,7 +5,7 @@ public interface AutomationConstants {
 	// ============================================================
 	// ✅ CORE
 	// ============================================================
-	String BASE_URL = "http://localhost:5173";
+	String BASE_URL = "https://biokart.com/";
 	String ROOT_DIRECTORY = System.getProperty("user.dir");
 	String EXCEL_SHEET_PATH = ROOT_DIRECTORY + "\\project_documents.xlsx";
 	String FAILED_SCREENSHOT_FOLDER = ROOT_DIRECTORY + "\\failed_screenshots";
@@ -15,7 +15,7 @@ public interface AutomationConstants {
 	// ============================================================
 	String URL_HOME = BASE_URL + "/";
 	String URL_HOME_ALT_1 = BASE_URL + "/home";
-	String URL_HOME_ALT_2 = BASE_URL + "/homepage";
+	
 
 	String URL_PROJECTS = BASE_URL + "/projects";
 	String URL_EXPLORE_SOLUTIONS = BASE_URL + "/explore-solutions";
