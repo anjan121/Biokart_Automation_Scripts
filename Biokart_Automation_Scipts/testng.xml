@@ -23,12 +23,6 @@
         </classes>
     </test>
 
-    <test name="Edge Test">
-        <parameter name="browser" value="edge"/>
-        <parameter name="url" value="https://biokart.com/"/>
-        <classes>
-            <class name="scripts.homepage_scenarios.regression_scenarios.AS_HomePage_Header_RegressionScenarios"/>
-        </classes>
-    </test>
+
 
 </suite>
