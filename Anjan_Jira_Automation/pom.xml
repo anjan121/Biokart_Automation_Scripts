@@ -1,16 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Biokart_Automation_Scipts</groupId>
-  <artifactId>Biokart_Automation_Scipts</artifactId>
+  <groupId>Anjan_Jira_Automation</groupId>
+  <artifactId>Anjan_Jira_Automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
   
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
+
   <dependencies>
 
     <!-- Selenium -->
@@ -27,20 +26,6 @@
       <version>7.12.0</version>
       <scope>test</scope>
     </dependency>
-    <!-- WebDriverManager -->
-    <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>6.3.2</version>
-    </dependency>
-
-    <!-- Allure TestNG -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-testng</artifactId>
-        <version>2.35.2</version>
-    </dependency>
-
 
     <!-- Apache POI (ONLY this one is enough for Excel) -->
     <dependency>
@@ -67,13 +52,6 @@
       <artifactId>log4j-slf4j2-impl</artifactId>
       <version>2.25.3</version>
     </dependency>
-    
-    <dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjweaver</artifactId>
-    <version>1.9.22.1</version>
-	</dependency>
-
 
     <!-- commons-lang3 (optional, keep if you use it) -->
     <dependency>
@@ -107,17 +85,9 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
-          <argLine>
-                    -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar
-                </argLine>
-
-                <systemPropertyVariables>
-                    <allure.results.directory>target/allure-results</allure.results.directory>
-                </systemPropertyVariables>
         </configuration>
       </plugin>
 
     </plugins>
   </build>
-
 </project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Hybrid Framework Suite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="listeners.TestListeners"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://biokart.com/"/>
+        <classes>
+            <class name="scripts.homepage_scenarios.regression_scenarios.AS_HomePage_Header_RegressionScenarios"/>
+        </classes>
+    </test>
+
+    <test name="Firefox Test">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://biokart.com/"/>
+        <classes>
+            <class name="scripts.homepage_scenarios.regression_scenarios.AS_HomePage_Header_RegressionScenarios"/>
+        </classes>
+    </test>
+
+    <test name="Edge Test">
+        <parameter name="browser" value="edge"/>
+        <parameter name="url" value="https://biokart.com/"/>
+        <classes>
+            <class name="scripts.homepage_scenarios.regression_scenarios.AS_HomePage_Header_RegressionScenarios"/>
+        </classes>
+    </test>
+
+</suite>
