@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'JDK17'          // Change according to your Jenkins tool name
+        maven 'Maven3'       // Change according to your Jenkins tool name
+    }
+
+    environment {
+        MAVEN_OPTS = '-Xmx1024m'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Clean Project') {
+            steps {
+                bat 'mvn clean'
+            }
+        }
+
+        stage('Execute Automation Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                junit '**/target/surefire-reports/*.xml'
+            }
+        }
+
+        stage('Archive Reports') {
+            steps {
+                archiveArtifacts artifacts: 'test-output/**, target/surefire-reports/**', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Execution Completed'
+        }
+
+        success {
+            echo 'Automation Tests Passed'
+        }
+
+        failure {
+            echo 'Automation Tests Failed'
+        }
+    }
+}
