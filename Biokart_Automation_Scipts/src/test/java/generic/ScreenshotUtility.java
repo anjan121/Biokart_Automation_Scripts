@@ -27,7 +27,7 @@
 
 package generic;
 
-import java.io.File;
+import java.io.File; 
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -37,6 +37,7 @@ import com.google.common.io.Files;
 
 public class ScreenshotUtility extends OpenClose {
 
+	
 	private final WebDriver driverRef;
 
 	public ScreenshotUtility(WebDriver driver) {

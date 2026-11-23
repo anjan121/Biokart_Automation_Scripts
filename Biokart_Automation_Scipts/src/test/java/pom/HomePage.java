@@ -16,7 +16,11 @@ public class HomePage extends AllVerifications {
 	// ============================================================
 	// ✅ HOMEPAGE - HERO CAROUSEL
 	// ============================================================
-
+	public HomePage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+	}
+	
 	@FindBy(css = "div#root")
 	private WebElement pageRootContainer;
 
@@ -469,10 +473,7 @@ public class HomePage extends AllVerifications {
 	}
 
 // initialize all the webelements using the pom class constructor. 
-	public HomePage(WebDriver driver) {
-		super(driver);
-		PageFactory.initElements(driver, this);
-	}
+	
 
 	// products section elements.
 	@FindBy(css = "div.flex.flex-col.gap-3.mb-4>div:first-child>h2")

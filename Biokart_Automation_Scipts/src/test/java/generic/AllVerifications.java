@@ -40,6 +40,7 @@ public class AllVerifications {
 		this.su = new ScreenshotUtility(driver);
 	}
 
+
 	protected WebDriverWait createWait(int seconds) {
 		return new WebDriverWait(driver, Duration.ofSeconds(seconds));
 	}
